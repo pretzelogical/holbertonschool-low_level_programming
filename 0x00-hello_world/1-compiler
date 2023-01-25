@@ -1,2 +1,2 @@
-#!/usr/bin/env bash
+#!/bin/bash
 gcc -c $CFILE -o main.o
