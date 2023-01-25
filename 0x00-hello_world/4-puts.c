@@ -1,6 +1,9 @@
+/**
+ * main- print "Programmig is like building a multilingual puzzle
+ * Return: returns 0
+ */
 #include <stdio.h>
 #include <string.h>
-/* print ""Programming is like building a multilingual puzzle"  */
 int main(void)
 {
 char str1[80];
