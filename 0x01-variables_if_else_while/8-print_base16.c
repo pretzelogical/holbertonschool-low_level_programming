@@ -7,8 +7,9 @@
 int main(void)
 {
 char hexa[17] = "0123456789abcdef";
+int i;
 
-for (int i = 0; i < sizeof(hexa) - 1; i++)
+for (i = 0; i < 16; i++)
 putchar(hexa[i]);
 
 putchar('\n');
