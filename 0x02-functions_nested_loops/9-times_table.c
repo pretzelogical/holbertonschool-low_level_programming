@@ -26,7 +26,7 @@ for (multiplier = 0; multiplier < 10; multiplier++)
 			_putchar(output + '0');
 			_putchar('\n');
 			}
-		else if (num == 9 && output > 10)
+		else if (num == 9 && output >= 10)
 			{
 			_putchar(((output / 10) % 10) + '0');
 			_putchar((output % 10) + '0');
@@ -39,7 +39,7 @@ for (multiplier = 0; multiplier < 10; multiplier++)
 			_putchar(',');
 			_putchar(' ');
 			}
-		else if (output > 10)
+		else if (output >= 10)
 			{
 			_putchar(((output / 10) % 10) + '0');
 			_putchar((output % 10) + '0');
