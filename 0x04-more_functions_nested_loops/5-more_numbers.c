@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * more_numbers- prints 10-14 10 times
- * followed by a newline
+ * more_numbers- prints 10-14 10 times followed by a newline
  *
  * Return: Always return nothing (void)
 */
