@@ -16,26 +16,16 @@ for (i = 1; i <= 100; i++)
 	if (!(i % 3))
 		{
 		if (!(i % 5))
-			{
 			printf("FizzBuzz ");
-			}
 		else
-			{
-		printf("Fizz ");
-			}
+			printf("Fizz ");
 		}
-		else if (!(i % 5))
-		{
-		printf("Buzz ");
-		}
+	else if (!(i % 5))
+	printf("Buzz ");
 	else
-		{
-		printf("%d ", i);
-		}
+	printf("%d ", i);
 	}
-
 printf("\n");
-
 return (0);
 }
 
