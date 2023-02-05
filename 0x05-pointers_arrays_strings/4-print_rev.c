@@ -9,5 +9,21 @@
  */
 void print_rev(char *s)
 {
+char *start;
+
+start = s;
+
+while (*s != '\0')
+	{
+	s++;
+	}
+
+while (s != start - 1)
+	{
+	_putchar(*s);
+	s--;
+	}
+
+_putchar('\n');
 
 }
