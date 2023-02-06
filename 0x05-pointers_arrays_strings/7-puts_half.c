@@ -15,13 +15,13 @@ i = 0;
 len = _strlen(str);
 
 if (len % 2 == 0)
-	half = (len / 2) - 1;
+	half = len / 2;
 else
-	half = ((len - 1) / 2) - 1;
+	half = (len - 1) / 2;
 
 for (i = 0; i < len; i++)
 	{
-	if (half >= 0)
+	if (half > 0)
 		{
 		half--;
 		str++;
