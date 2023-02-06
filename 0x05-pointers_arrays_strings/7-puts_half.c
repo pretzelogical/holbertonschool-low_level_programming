@@ -1,14 +1,16 @@
-#include "header.h"
+#include "main.h"
 
 /**
- * main- Describe main function
- * @x: Describe function argument
+ * puts_half- prints half of a string
+ * followed by a newline
+ * @str: string to print half of
  *
- * Return: Always return 0 (success)
+ * Return: Always return nothing (void)
  */
 int main(void)
 {
-/* code here */
+
+
 return (0);
 }
 
