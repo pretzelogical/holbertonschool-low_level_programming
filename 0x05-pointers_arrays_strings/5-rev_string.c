@@ -29,6 +29,12 @@ for (i = 0; i < len / 2; i++)
 	}
 }
 
+/**
+ * _strlen- returns the length of a string
+ * @s: string to check lenght of
+ *
+ * Return: Always return length of string
+ */
 int _strlen(char *s)
 {
 int l;
