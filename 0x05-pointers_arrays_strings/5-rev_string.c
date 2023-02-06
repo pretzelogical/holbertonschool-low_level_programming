@@ -23,7 +23,7 @@ for (i = 0; i < len - 1; i++)
 	{
 	end++;
 	}
-for (i = 0; i < _strlen(s) / 2; i++)
+for (i = 0; i < len / 2; i++)
 	{
 	tmp = *end;
 	*end = *start;
