@@ -13,12 +13,9 @@ char *start, *end, tmp;
 
 len = _strlen(s);
 start = s;
-end = s;
 
 for (i = 0; i < len - 1; i++)
-	{
 	end++;
-	}
 
 for (i = 0; i < _strlen(s) / 2; i++)
 	{
@@ -27,6 +24,6 @@ for (i = 0; i < _strlen(s) / 2; i++)
 	*start = tmp;
 
 	start++;
-	end--;
+	end++;
 	}
 }
