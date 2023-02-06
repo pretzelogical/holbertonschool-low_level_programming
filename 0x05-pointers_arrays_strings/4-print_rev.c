@@ -17,6 +17,7 @@ while (*s != '\0')
 	{
 	s++;
 	}
+/* stops some invisible character(?) from printing  */
 s--;
 while (s != start - 1)
 	{
