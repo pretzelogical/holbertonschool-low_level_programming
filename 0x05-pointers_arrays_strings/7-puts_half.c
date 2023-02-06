@@ -7,10 +7,51 @@
  *
  * Return: Always return nothing (void)
  */
-int main(void)
+void puts_half(char *str)
 {
+int len, i, half;
 
+i = 0;
+len = _strlen(str);
 
-return (0);
+if (len % 2 == 0)
+	half = (len / 2) - 1;
+else
+	half = ((len - 1) / 2) - 1;
+
+for (i = 0; i < len; i++)
+	{
+	if (half >= 0)
+		{
+		half--;
+		str++;
+		}
+	else
+		{
+		_putchar(*str);
+		str++;
+		}
+	}
+_putchar('\n');
+
 }
 
+/**
+ * _strlen- returns the length of a string
+ * @s: string to check lenght of
+ *
+ * Return: Always return length of string
+ */
+int _strlen(char *s)
+{
+int l;
+
+l = 0;
+while (*s != '\0')
+	{
+	s++;
+	l++;
+	}
+
+return (l);
+}
