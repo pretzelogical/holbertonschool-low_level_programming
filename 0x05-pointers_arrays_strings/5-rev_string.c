@@ -11,18 +11,13 @@ void rev_string(char *s)
 int len, i;
 char *start, *end, tmp;
 
+len = _strlen(s);
 start = s;
 end = s;
 
-while (*s != '\0')
-	{
-	s++;
-	len++;
-	}
 for (i = 0; i < len - 1; i++)
-	{
 	end++;
-	}
+
 for (i = 0; i < len / 2; i++)
 	{
 	tmp = *end;
@@ -33,3 +28,18 @@ for (i = 0; i < len / 2; i++)
 	end--;
 	}
 }
+
+int _strlen(char *s)
+{
+int l;
+
+l = 0;
+while (*s != '\0')
+	{
+	s++;
+	l++;
+	}
+
+return (l);
+}
+
