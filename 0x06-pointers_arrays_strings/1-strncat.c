@@ -17,6 +17,12 @@ char *_strncat(char *dest, char *src, int n)
 	destlen = _strlen(dest);
 	srclen = _strlen(src);
 	i = destlen;
+
+	/* if n is bigger then the srclen */
+	/* set n to srclen (print max length)*/
+	if (n > srclen)
+		n = srclen;
+
 	/* starts at nullbyte of dest*/
 	while (i < destlen + n)
 		{
@@ -24,7 +30,7 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 		}
 
-	if (srclen <= n)
+	if (srclen < n)
 		*(dest + i) = '\0';
 
 	return (dest);
