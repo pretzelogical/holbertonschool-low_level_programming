@@ -7,5 +7,6 @@ int _putchar(char c);
 char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char is_subst_match(char *c, char *subst);
+char *_strpbrk(char *s, char *accept);
 
 #endif
