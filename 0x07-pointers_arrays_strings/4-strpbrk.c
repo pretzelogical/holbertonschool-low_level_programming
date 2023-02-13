@@ -14,8 +14,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		if (is_subst_match(s, accept) > 0)
 			return (s);
-		else
-			s++;
+		s++;
 	}
 	return (0);
 }
