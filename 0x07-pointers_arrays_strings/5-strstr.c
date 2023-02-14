@@ -17,20 +17,22 @@ char *_strstr(char *haystack, char *needle)
 	if (*needle == '\0')
 		return (haystack);
 
-	while (*haystack != '\0')
+	for (; *haystack != '\0'; haystack++)
 	{
-		if (*haystack == *needle)
+		if (*haystack != *ntmp)
+			continue;
+
+		nstart = haystack;
+
+		while (1)
 		{
-			nstart = haystack;
-			while (*ntmp == *haystack)
-			{
-				if (*ntmp == '\0')
-					return (nstart);
-				ntmp++;
-				haystack++;
-			}
+			if (*ntmp == 0)
+				return (haystack);
+			if (*nstart++ != *ntmp++)
+				break;
+
 		}
-		haystack++;
+		ntmp = needle;
 	}
 	return ('\0');
 }
