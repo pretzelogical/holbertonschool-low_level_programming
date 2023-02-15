@@ -15,6 +15,9 @@ void _puts_recursion(char *s)
 		return;
 	}
 
-	_putchar(*s);
-	_puts_recursion(s + 1);
+	if (*s >= 32 && *s <= 126)
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+	}
 }
