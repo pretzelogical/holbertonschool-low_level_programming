@@ -6,7 +6,7 @@
  *
  * Return: Return my son NOW-marlinclown22
 */
-int atoi(char *s)
+int _atoi(char *s)
 {
 	int i;
 
