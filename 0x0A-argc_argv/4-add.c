@@ -13,7 +13,7 @@ int check_pos_num(char *c)
 {
 	for (; *c != '\0'; c++)
 	{
-		if (!(*c >= '0') && !(*c <= '9'))
+		if (*c < '0' || *c > '9')
 		{
 			return (0);
 		}
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		if (!check_pos_num(argv[i]))
+		if (check_pos_num(argv[i]) == 0)
 		{
 			printf("Error\n");
 			return (1);
