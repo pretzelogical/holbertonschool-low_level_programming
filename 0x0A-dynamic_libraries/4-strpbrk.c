@@ -1,6 +1,13 @@
 #include "main.h"
 
-char is_subst_match(char *c, char *subst)
+/**
+ * is_match_subst- check if c matches substring
+ * @c: character to match
+ * @subst: substring to match
+ *
+ * Return: return matching character else 0
+*/
+char is_match_subst(char *c, char *subst)
 {
 	while (*subst != '\0')
 	{
@@ -24,17 +31,10 @@ char *_strpbrk(char *s, char *accept)
 {
 	while (*s != '\0')
 	{
-		if (is_subst_match(s, accept) > 0)
+		if (is_match_subst(s, accept) > 0)
 			return (s);
 		s++;
 	}
 	return (0);
 }
 
-/**
- * is_subst_match- check if c matches substring
- * @c: character to match
- * @subst: substring to match
- *
- * Return: return matching character else 0
-*/
