@@ -1,8 +1,5 @@
 #include "main.h"
 
-
-
-
 /**
  * malloc_checked- allocates a pointer in memory
  * if malloc fails the function terminates with
