@@ -30,13 +30,13 @@ return (l);
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i, l1, l2, lf;
+	unsigned int i, l1, l2, lf;
 	char *str;
 
 	if (s1 == NULL)
-		*s1 = "";
+		s1 = "";
 	if (s2 == NULL)
-		*s2 = "";
+		s2 = "";
 	l1 = _strlen(s1);
 	l2 = _strlen(s2);
 	if (n > l2)
@@ -46,10 +46,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (i = 0; i < lf; i++)
 	{
-		if (i > l1)
-			str[i] = s2[i - l1];
-		else
+		if (i < l1)
 			str[i] = s1[i];
+		else
+			str[i] = s2[i - l1];
 	}
+	str[i] = '\0';
 	return (str);
 }
