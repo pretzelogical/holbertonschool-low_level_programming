@@ -21,34 +21,35 @@ return (l);
 }
 
 /**
- * _strcpy- copies string pointed to by src
- * (including null byte) to buffer pointed
- * to by dest
- *
- * @dest: buffer to copy to
- * @src: string to copy
- *
- * Return: Always return nothing (void)
- */
-char *_strcpy(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; i <= _strlen(src); i++)
-		dest[i] = src[i];
-
-	return (dest);
-}
-
-/**
  * string_nconcat- concatenates two strings
  * @s1: string to concatenate on
- * @s1: string to concatenate
+ * @s2: string to concatenate
  * @n: number of bytes to copy
  *
  * Return: return pointer to concatenated string
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	int i, l1, l2, lf;
+	char *str;
 
+	if (s1 == NULL)
+		*s1 = "";
+	if (s2 == NULL)
+		*s2 = "";
+	l1 = _strlen(s1);
+	l2 = _strlen(s2);
+	if (n > l2)
+		n = l2;
+	lf = l1 + n;
+	str = malloc(lf * sizeof(char));
+
+	for (i = 0; i < lf; i++)
+	{
+		if (i > l1)
+			str[i] = s2[i - l1];
+		else
+			str[i] = s1[i];
+	}
+	return (str);
 }
