@@ -9,10 +9,11 @@
 */
 int op_add(int a, int b)
 {
-	return a + b;
+	return (a + b);
 }
+
 /**
- * op_sub returns the difference
+ * op_sub- returns the difference
  * of a & b
  * @a: first number to subtract
  * @b: second number to subtract
@@ -21,8 +22,9 @@ int op_add(int a, int b)
 */
 int op_sub(int a, int b)
 {
-	return a - b;
+	return (a - b);
 }
+
 /**
  * op_mul- returns the product
  * of a & b
@@ -31,10 +33,11 @@ int op_sub(int a, int b)
  *
  * Return: a * b
 */
-int op_add(int a, int b)
+int op_mul(int a, int b)
 {
-	return a * b;
+	return (a * b);
 }
+
 /**
  * op_div- returns the result
  * of division of a & b
@@ -43,10 +46,11 @@ int op_add(int a, int b)
  *
  * Return: a / b
 */
-int op_add(int a, int b)
+int op_div(int a, int b)
 {
-	return a / b;
+	return (a / b);
 }
+
 /**
  * op_mod- returns the remainder
  * of division of a & b
@@ -55,7 +59,7 @@ int op_add(int a, int b)
  *
  * Return: a % b
 */
-int op_add(int a, int b)
+int op_mod(int a, int b)
 {
-	return a % b;
+	return (a % b);
 }
