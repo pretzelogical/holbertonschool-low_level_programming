@@ -9,12 +9,10 @@
 */
 void print_node(const list_t *h)
 {
-	
 	if (h->str)
 		printf("[%u] %s\n", h->len, h->str);
 	else if (h->len)
 		printf("[0] (nil)\n");
-
 }
 
 /**
@@ -29,7 +27,7 @@ size_t print_list(const list_t *h)
 	size_t size;
 
 	if (!h)
-		return (size_t) (NULL);
+		return ((size_t) (NULL));
 
 	size = 0;
 	while (h->next)
