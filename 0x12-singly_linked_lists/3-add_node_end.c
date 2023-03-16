@@ -33,15 +33,15 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	new = malloc(sizeof(list_t));
 	if (!new)
-		return(NULL);
-	
+		return (NULL);
+
 	if (str)
 	{
 		new->str = strdup(str);
 		if (!new->str)
 		{
 			free(new);
-			return(NULL);
+			return (NULL);
 		}
 		new->len = _strlen(str);
 	}
