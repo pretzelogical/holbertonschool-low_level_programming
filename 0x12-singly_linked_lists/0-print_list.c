@@ -9,10 +9,13 @@
 */
 void print_node(const list_t *h)
 {
+	
 	if (h->str)
 		printf("[%u] %s\n", h->len, h->str);
-	else
+	else if (h->len)
 		printf("[0] (nil)\n");
+	else
+		return;
 }
 
 /**
