@@ -14,8 +14,7 @@ void print_node(const list_t *h)
 		printf("[%u] %s\n", h->len, h->str);
 	else if (h->len)
 		printf("[0] (nil)\n");
-	
-	return;
+
 }
 
 /**
