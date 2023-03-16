@@ -9,6 +9,9 @@
 */
 void print_node(const list_t *h)
 {
+	if (!h)
+		return;
+
 	if (h->str)
 		printf("[%u] %s\n", h->len, h->str);
 	else if (h->len)
