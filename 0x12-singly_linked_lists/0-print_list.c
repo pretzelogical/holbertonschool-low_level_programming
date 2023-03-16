@@ -26,10 +26,10 @@ size_t print_list(const list_t *h)
 {
 	size_t size;
 
-	if (!h)
-		return (0);
-
 	size = 0;
+	if (!h)
+		return (size);
+
 	while (h->next)
 	{
 		print_node(h);
