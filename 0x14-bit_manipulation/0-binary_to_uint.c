@@ -45,7 +45,7 @@ unsigned int binary_to_uint(const char *b)
 	int outl, mult;
 
 	out = 0;
-	
+
 	if (!b)
 		return (out);
 	outl = _strlen(b);
