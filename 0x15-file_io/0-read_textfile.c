@@ -22,10 +22,8 @@ int _putchar(char c)
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fileDescriptor;
+	int fileDescriptor, rd, wr;
 	char *str;
-	size_t i;
-	ssize_t letterCount;
 
 	if (!filename)
 		return (0);
@@ -34,22 +32,28 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fileDescriptor < 0)
 		return (0);
 
-	str = malloc(letters * sizeof(char));
+	str = malloc(sizeof(char) * letters + 1);
 	if (!str)
 		return (0);
-
-	read(fileDescriptor, str, letters);
-
-	letterCount = 0;
-	for (i = 0; i < letters && *(str + i) != '\0'; i++)
+	rd = read(fileDescriptor, str, letters);
+	if (rd == -1)
 	{
-		if (*(str + i) > 32 && *(str + i) < 127)
-			letterCount++;
-		_putchar(*(str + i));
+		free(str);
+		return (0);
 	}
 
+	str[letters] = '\0';
+
+	wr = write(1, str, rd);
+	if (wr == -1)
+	{
+		free(str);
+		return(0);
+	}
+
+	close(fileDescriptor);
 	free(str);
 
-	return (letterCount);
+	return (wr);
 
 }
