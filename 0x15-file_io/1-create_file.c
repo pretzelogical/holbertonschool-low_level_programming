@@ -18,26 +18,6 @@ return (l);
 }
 
 /**
- * _strcpy- copies string pointed to by src
- * (including null byte) to buffer pointed
- * to by dest
- *
- * @dest: buffer to copy to
- * @src: string to copy
- *
- * Return: Always return nothing (void)
- */
-char *_strcpy(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; i <= _strlen(src); i++)
-		dest[i] = src[i];
-
-	return (dest);
-}
-
-/**
  * create_file- creates a file
  * @filename: name of the file to create
  * @text_content: null terminated string to write to the file
@@ -47,7 +27,6 @@ char *_strcpy(char *dest, char *src)
 int create_file(const char *filename, char *text_content)
 {
 	int fileD;
-	char *str;
 	int wr;
 
 	if (!filename)
@@ -60,17 +39,11 @@ int create_file(const char *filename, char *text_content)
 	if (!text_content)
 		text_content = "";
 
-	str = malloc(sizeof(char) * _strlen(text_content) + 1);
-	if (!str)
-		return (-1);
-
-	_strcpy(str, text_content);
-	wr = write(fileD, str, _strlen(text_content) + 1);
+	wr = write(fileD, text_content, _strlen(text_content));
 	if (wr == -1)
 		return (-1);
 
 
-	free(str);
 	close(fileD);
 	return (1);
 }
