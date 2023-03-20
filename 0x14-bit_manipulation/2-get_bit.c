@@ -30,6 +30,9 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	int mask, count;
 
+	if (n == 0 && index == 0)
+		return (0);
+
 	count = _count_bits(n);
 
 	if ((int) index > count)
