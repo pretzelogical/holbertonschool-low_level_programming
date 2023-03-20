@@ -1,23 +1,5 @@
 #include "main.h"
 
-/**
- * _count_bits- count the bit places in a given number
- * @n: number to count bit places
- *
- * Return: number of bit places in n
-*/
-int _count_bits(unsigned long int n)
-{
-	int count;
-
-	count = 0;
-	while (n != 0)
-	{
-		count++;
-		n = n >> 1;
-	}
-	return (count);
-}
 
 /**
  * set_bit- sets the value of a bit to 1 in a given index
